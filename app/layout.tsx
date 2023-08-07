@@ -1,13 +1,13 @@
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google'
 
-import "./globals.css";
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-    title: "Nextjs 13, TailwindCss Template",
-    description: "A template for frontend developers created By Chirag Bhalotia",
-};
+    title: 'Nextjs 13, TailwindCss Template',
+    description: 'A template for frontend developers created By Chirag Bhalotia',
+}
 
 interface RootLayoutProps {
     children: React.ReactNode;
@@ -15,8 +15,10 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en">
-            <body className={`${inter.className} text-text`}>{children}</body>
+        <html lang='en'>
+        <body className={`${inter.className} text-text`}>
+        <main className={'max-w-7xl mx-auto lg:p-10'}>{children}</main>
+        </body>
         </html>
-    );
+    )
 }
